@@ -1,0 +1,131 @@
+contact us.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> CONTACT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="A Jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#button").click(function(){
+          $("#box").fadeToggle (1000);
+        });
+      });
+    </script>
+
+    <style>
+      .navbar-custom { background-color:  #c8a996;}
+      .nav.navbar-nav.navbar-right > li > a {color: black;}
+      .navbar-nav > li > .dropdown-menu {background-color: #bd9881;}
+      .navbar-nav > li > .dropdown-menu a{color: #f1f1f1; }
+      .navbar-nav > li > .dropdown-menu a:hover {background-color: #c8a996;}
+      .header   {
+                padding: 30px;
+                background: #c8a996;
+                }
+      #box      {
+                margin:100px; 
+                padding: 40px; 
+                height:100%;
+                width:75%; 
+                background-color: #E3CAAF;
+                }
+      .kelas1   {
+                font-size: 20px; 
+                line-height:1em
+                }
+</style>
+    </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-custom">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img src="President University.png" style="width: 42px;">
+        <img src="PUMA COMPUTING.png" style="width: 50px;">
+       
+        <br> <br>
+        <h2> CONTACT </h2>
+        <br><br>
+      
+      </div>
+    
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="HOME.html">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Study Program <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="info tech.html">Information Technology</a></li>
+            <li><a href="info sys.html">Information System</a></li>
+            <li><a href="visual comd.html">Visual Communication Design</a></li>
+            <li><a href="interior.html">Interior Design</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="the univ.html">The University</a></li>
+            <li><a href="campus facilities.html">Campus Facilities</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+			<li><a href="java feedback.html">Feedback</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="box">
+    <h2><i>Welcome to the President University Faculty of Computing Website</i></h2>
+    <p class="kelas1"> Computing Faculty has PUMA computing as their major association. PUMA Computing is a place for computizen to develop them self and to increasing the relation by embracing the computizen into one unity </p>
+    <p class="kelas1">PUMA Computing is President University Major Association of Computing. Members of PUMA Computing consist of students from the IT (Information Technology) and IS (Information System) majors.</p>
+  </div>
+
+  <button type="button" class="btn" style="text-align: center;"><a href="http://www.pumacomputing.org/"> PUMA </a></button>
+  <button id="button">Tap to Close</button>
+    
+  <div class="container">
+    <br><br>
+      <h2>Contact Us:</h2>
+        <p>Tel: +62-21 8910 9763 Ext. 112-115 </p>
+        <p>Email: info@president.ac.id</p>
+        <br> <br>
+        <h2>Address:</h2>
+        <p> Jl. Ki Hajar Dewantara, Kota Jababeka, Cikarang Baru, Bekasi 17550 - Indonesia </p>
+  </div>
+
+  <div class="container">
+  <h2>Feedback Form</h2>
+      <label>Name : </label>
+        <input type="text" name="name" placeholder="Enter name here">
+      <br>
+
+      <label>Email : </label>
+        <input type="email" name="mail" placeholder="e-mail address">
+      <br>
+
+      <label>Major : </label>
+        <select name="major">
+          <option>Information Technology</option>
+          <option>Information System</option>
+          <option>Visual Communication</option>
+          <option>Interior Design </option>
+        </select>
+      <br>
+
+      <label>Comment : </label>        
+        <textarea rows="6" cols="50" name="commentfield"></textarea>
+        <br>
+
+      <input type="submit" value="Send Feedback">
+      <input type="reset" value="Reset">
+      <br><br>
+
+    <form>
+  </div>
+</body>
+</html>

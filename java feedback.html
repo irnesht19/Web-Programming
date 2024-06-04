@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <style>
+  .dropbtn	{
+			background-color: #c8a996;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			}
+
+.dropdown 	{
+  			position: relative;
+  			display: inline-block;
+			}
+
+.dropdown-content 	{
+  					display: none;
+  					position: absolute;
+ 					right: 0;
+  					background-color: #c8a996;
+  					min-width: 160px;
+  					box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  					z-index: 1;
+					}
+
+.dropdown-content a {
+  					color: white;
+  					padding: 12px 16px;
+  					text-decoration: none;
+  					display: block;
+					}
+.header 			{
+ 		 	 		padding: 30px;
+ 		 	 		background: #c8a996;
+					}
+
+.dropdown-content a:hover {background-color: #bd9881;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #ba947b;}
+
+ td 			{
+				text-align: center;
+				}   
+</style>				
+</head>
+<body>
+<div class="header">
+		<img src="President University.png" style="width: 52px;">
+		<img src="PUMA COMPUTING.png" style="width: 60px;">
+	
+		<div class="dropdown" style="float:right;">
+			<button class="dropbtn"> About </button>
+				<div class="dropdown-content">
+ 					<a href="The University.html">The University</a>
+					<a href="campus f.html">Campus Facilities</a>
+					<a href="contact.html">Contact</a>
+					<a href="java feedback.html">Feedback</a>
+					
+  				</div>
+		</div>
+
+		<div class="dropdown" style="float:right;">
+			<button class="dropbtn">Study Program</button>
+			<div class="dropdown-content">
+ 				<a href="IT.html">Information Technology</a>
+				<a href="IS.html">Information System</a>
+				<a href="VCD.html">Visual Communication Design</a>
+				<a href="ID.html">Interior Design</a>
+  			</div>
+		</div>
+
+		<div class="active" style="float:right;">
+			<button class="dropbtn"><a href="HOMEPAGE.html">Home </a> </button>
+		</div>
+		<h2> Feedback </h2>
+		</div>
+		  <fieldset>
+      <legend>Feedback </legend>
+	  <form action="" method="post" id="form-login">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="name" />
+      </div>
+      <div>
+        <label for="major">Major</label>
+         <select name="major">
+             <option value="name">Information Technology</option>
+			<option >Information System</option>
+			<option >Visual Communication Design</option>
+			<option> Design Interior </option>
+		</select>
+		<div>
+        <label for="comment">Comment</label>
+     <textarea name="story" rows="4" cols="60" maxlength="300" ></textarea>	
+      </div>
+      <div>
+        <p id="feedback"></p>
+        <button type="submit">Submit</button>
+        <button type="reset">Celar</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <script>
+    const formLogin = document.getElementById("form-login");
+    const feedbackMessage = document.getElementById("feedback");
+    
+    // mendengarkan event submit pada form
+    formLogin.addEventListener("submit", function(event){
+      event.preventDefault();
+      const data = new FormData(event.target);
+      feedbackMessage.innerHTML = `Feedback on behalf of  <code>${data.get("name")}</code> has been submitted!`;
+    });
+
+    // mendengarkan event reset pada form
+    formLogin.addEventListener("reset", function(){
+      feedbackMessage.textContent = "Form dibersihkan!";
+    });
+  </script>
+  </body>
+  </html>
